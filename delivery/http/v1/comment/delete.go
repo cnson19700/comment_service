@@ -4,10 +4,10 @@ import (
 	"errors"
 	"strconv"
 
+	"github.com/cnson19700/comment_service/usecase/comment"
 	"github.com/cnson19700/pkg/apperror"
 	"github.com/cnson19700/pkg/utils"
 	"github.com/labstack/echo/v4"
-	"github.com/soncaodb/usecase/comment"
 )
 
 func (r *Route) Delete(c echo.Context) error {

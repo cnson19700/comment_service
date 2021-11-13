@@ -3,7 +3,8 @@ package comment
 import (
 	"context"
 
-	"github.com/soncaodb/model"
+	bookmodel "github.com/cnson19700/book_service/model"
+	"github.com/cnson19700/comment_service/model"
 )
 
 type Repository interface {
@@ -15,8 +16,8 @@ type Repository interface {
 	Update(ctx context.Context, comment *model.Comment) (*model.Comment, error)
 	Find(
 		ctx context.Context,
-		conditions []model.Condition,
-		paginator *model.Paginator,
+		conditions []bookmodel.Condition,
+		paginator *bookmodel.Paginator,
 		orders []string,
 	) (*model.CommentResult, error)
 }

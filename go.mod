@@ -1,9 +1,10 @@
-module github.com/cnson19700/book_service
+module github.com/cnson19700/comment_service
 
 go 1.17
 
 require (
 	github.com/cnson19700/auth_service v0.0.0-20211111084237-d3ad0cc0d462
+	github.com/cnson19700/book_service v0.0.0-20211113142847-42b4e4d73c93
 	github.com/cnson19700/pkg v0.0.0-20211018031701-377617a7e12d
 	github.com/cnson19700/user_service v0.0.0-20211110070327-5641fe515c4a
 	github.com/golang-jwt/jwt v3.2.2+incompatible

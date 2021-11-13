@@ -4,11 +4,11 @@ import (
 	"errors"
 	"strconv"
 
+	"github.com/cnson19700/comment_service/model"
+	"github.com/cnson19700/comment_service/usecase/comment"
 	"github.com/cnson19700/pkg/apperror"
 	"github.com/cnson19700/pkg/utils"
 	"github.com/labstack/echo/v4"
-	"github.com/soncaodb/model"
-	"github.com/soncaodb/usecase/comment"
 )
 
 func (r *Route) GetList(c echo.Context) error {

@@ -4,8 +4,9 @@ import (
 	"context"
 	"strings"
 
+	bookmodel "github.com/cnson19700/book_service/model"
+	"github.com/cnson19700/comment_service/model"
 	"github.com/pkg/errors"
-	"github.com/soncaodb/model"
 	"gorm.io/gorm"
 )
 
@@ -70,8 +71,8 @@ func (r *pgRepository) Update(ctx context.Context, book *model.Comment) (*model.
 
 func (r *pgRepository) Find(
 	ctx context.Context,
-	conditions []model.Condition,
-	paginator *model.Paginator,
+	conditions []bookmodel.Condition,
+	paginator *bookmodel.Paginator,
 	orders []string,
 ) (*model.CommentResult, error) {
 	// Build query
@@ -81,9 +82,9 @@ func (r *pgRepository) Find(
 	// Where
 	for _, condition := range conditions {
 		switch strings.ToLower(condition.Type) {
-		case model.ConditionTypeNot:
+		case bookmodel.ConditionTypeNot:
 			query.Not(condition.Pattern, condition.Values...)
-		case model.ConditionTypeOr:
+		case bookmodel.ConditionTypeOr:
 			query.Or(condition.Pattern, condition.Values...)
 		default:
 			query.Where(condition.Pattern, condition.Values...)
@@ -104,7 +105,7 @@ func (r *pgRepository) Find(
 		}
 
 		if paginator.Limit == 0 {
-			paginator.Limit = model.PageSize
+			paginator.Limit = bookmodel.PageSize
 		}
 
 		result.Page = paginator.Page

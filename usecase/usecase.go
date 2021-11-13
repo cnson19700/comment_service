@@ -1,16 +1,16 @@
 package usecase
 
 import (
-	"github.com/cnson19700/book_service/repository"
-	"github.com/cnson19700/book_service/usecase/book"
+	"github.com/cnson19700/comment_service/repository"
+	"github.com/cnson19700/comment_service/usecase/comment"
 )
 
 type UseCase struct {
-	Book book.IUsecase
+	Comment comment.IUsecase
 }
 
 func New(repo *repository.Repository) *UseCase {
 	return &UseCase{
-		Book: book.New(repo),
+		Comment: comment.New(repo),
 	}
 }

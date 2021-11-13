@@ -1,14 +1,14 @@
 package comment
 
 import (
-	"github.com/soncaodb/repository"
-	"github.com/soncaodb/repository/comment"
-	"github.com/soncaodb/repository/user"
+	"github.com/cnson19700/comment_service/repository"
+	"github.com/cnson19700/comment_service/repository/comment"
+	userrepository "github.com/cnson19700/user_service/repository/user"
 )
 
 type Usecase struct {
 	commentRepo comment.Repository
-	userRepo    user.Repository
+	userRepo    userrepository.Repository
 }
 
 func New(repo *repository.Repository) IUsecase {

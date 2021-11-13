@@ -3,8 +3,8 @@ package comment
 import (
 	"github.com/labstack/echo/v4"
 
-	"github.com/soncaodb/usecase"
-	"github.com/soncaodb/usecase/comment"
+	"github.com/cnson19700/comment_service/usecase"
+	"github.com/cnson19700/comment_service/usecase/comment"
 )
 
 type Route struct {

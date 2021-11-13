@@ -3,7 +3,7 @@ package comment
 import (
 	"context"
 
-	"github.com/soncaodb/model"
+	"github.com/cnson19700/comment_service/model"
 )
 
 type IUsecase interface {

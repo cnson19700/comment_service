@@ -3,10 +3,10 @@ package comment
 import (
 	"context"
 
+	"github.com/cnson19700/comment_service/model"
+	checkform "github.com/cnson19700/comment_service/package/checkForm"
+	"github.com/cnson19700/comment_service/util/myerror"
 	"github.com/cnson19700/pkg/middleware"
-	"github.com/soncaodb/model"
-	checkform "github.com/soncaodb/package/checkForm"
-	"github.com/soncaodb/util/myerror"
 )
 
 type InsertCommentRequest struct {

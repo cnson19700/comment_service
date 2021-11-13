@@ -4,13 +4,14 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/soncaodb/model"
-	"github.com/soncaodb/util/myerror"
+	bookmodel "github.com/cnson19700/book_service/model"
+	"github.com/cnson19700/comment_service/model"
+	"github.com/cnson19700/comment_service/util/myerror"
 )
 
 type GetListRequest struct {
 	Filter    *model.CommentFilter
-	Paginator *model.Paginator
+	Paginator *bookmodel.Paginator
 	OrderBy   string `json:"order_by,omitempty" query:"order_by"`
 	OrderType string `json:"order_type,omitempty" query:"order_type"`
 }
@@ -26,7 +27,7 @@ func (u *Usecase) GetList(ctx context.Context, req *GetListRequest) (*model.Comm
 		listParentID[0] = req.Filter.ParentID
 	}
 
-	conditions := []model.Condition{
+	conditions := []bookmodel.Condition{
 		{Pattern: "book_id",
 			Values: listBookID},
 		{Pattern: "parent_id",
@@ -40,7 +41,7 @@ func (u *Usecase) GetList(ctx context.Context, req *GetListRequest) (*model.Comm
 	}
 
 	//Paging
-	paginator := &model.Paginator{
+	paginator := &bookmodel.Paginator{
 		Page:  1,
 		Limit: 20,
 	}
