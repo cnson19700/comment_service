@@ -3,8 +3,8 @@ package comment
 import (
 	"context"
 
+	checkform "github.com/cnson19700/book_service/package/checkForm"
 	"github.com/cnson19700/comment_service/model"
-	checkform "github.com/cnson19700/comment_service/package/checkForm"
 	"github.com/cnson19700/comment_service/util/myerror"
 	"github.com/cnson19700/pkg/middleware"
 )

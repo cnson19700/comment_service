@@ -4,6 +4,7 @@ import (
 	"errors"
 	"strconv"
 
+	bookmodel "github.com/cnson19700/book_service/model"
 	"github.com/cnson19700/comment_service/model"
 	"github.com/cnson19700/comment_service/usecase/comment"
 	"github.com/cnson19700/pkg/apperror"
@@ -22,7 +23,7 @@ func (r *Route) GetList(c echo.Context) error {
 	page, _ := strconv.Atoi(c.QueryParam("page"))
 	limit, _ := strconv.Atoi(c.QueryParam("limit"))
 
-	paginator := model.Paginator{
+	paginator := bookmodel.Paginator{
 		Page:  page,
 		Limit: limit,
 	}

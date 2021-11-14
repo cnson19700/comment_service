@@ -8,7 +8,7 @@ import (
 
 	"github.com/cnson19700/pkg/logger"
 	"github.com/cnson19700/pkg/utils"
-	"github.com/cnson19700/user_service/config"
+	"github.com/cnson19700/comment_service/config"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/plugin/dbresolver"
