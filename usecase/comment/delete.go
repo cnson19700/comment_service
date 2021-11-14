@@ -2,7 +2,6 @@ package comment
 
 import (
 	"context"
-	"log"
 )
 
 type DeleteCommentRequest struct {
@@ -13,7 +12,7 @@ func (u *Usecase) Delete(ctx context.Context, req DeleteCommentRequest) error {
 
 	comment, err := u.commentRepo.GetById(ctx, req.ID)
 	if err != nil {
-		log.Fatal(err)
+		return err
 	}
 
 	// check if this is root comment and delete subcomment
