@@ -1,9 +1,9 @@
 module github.com/cnson19700/comment_service
 
+// +heroku goVersion go1.17
 go 1.17
 
 require (
-	github.com/cnson19700/auth_service v0.0.0-20211111084237-d3ad0cc0d462
 	github.com/cnson19700/book_service v0.0.0-20211113142847-42b4e4d73c93
 	github.com/cnson19700/pkg v0.0.0-20211018031701-377617a7e12d
 	github.com/cnson19700/user_service v0.0.0-20211110070327-5641fe515c4a
@@ -22,6 +22,7 @@ require (
 	github.com/DataDog/datadog-go v4.8.2+incompatible // indirect
 	github.com/DataDog/sketches-go v1.2.0 // indirect
 	github.com/Microsoft/go-winio v0.5.0 // indirect
+	github.com/cnson19700/auth_service v0.0.0-20211111084237-d3ad0cc0d462 // indirect
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
 	github.com/getsentry/sentry-go v0.11.0 // indirect
 	github.com/go-sql-driver/mysql v1.6.0 // indirect
